@@ -1,0 +1,102 @@
+[gd_scene load_steps=8 format=3 uid="uid://bm7bt1fbdnfgm"]
+
+[ext_resource type="FontFile" uid="uid://i6rohtpkljwg" path="res://assets/fonts/SourceHanSansCN-Normal.otf" id="1_b6rf1"]
+[ext_resource type="Script" path="res://scripts/scenes/menu.gd" id="1_ge284"]
+[ext_resource type="Texture2D" uid="uid://nd4g4kyxnx8e" path="res://assets/textures/UI/title.png" id="2_paiif"]
+[ext_resource type="Texture2D" uid="uid://crvfj62vc7rjf" path="res://assets/textures/UI/newgame_button_maintitle_gray_240_120.png" id="4_2ji6x"]
+[ext_resource type="Texture2D" uid="uid://c7w18xdoo5epk" path="res://assets/textures/UI/newgame_button_maintitle_240_120.png" id="4_g1jbm"]
+[ext_resource type="Texture2D" uid="uid://cs1ki3yt8vxa7" path="res://assets/textures/UI/exit_button_maintitle_240_120.png" id="5_ncdh2"]
+[ext_resource type="Texture2D" uid="uid://bt8hnfsqj5qe1" path="res://assets/textures/UI/exit_button_maintitle_gray_240_120.png" id="6_4qoyc"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_ge284")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(573.5, 319.5)
+scale = Vector2(1.12207, 0.635742)
+texture = ExtResource("2_paiif")
+
+[node name="menu" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="btn_new_game_maintitle" type="Button" parent="CanvasLayer/menu"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+offset_left = 549.0
+offset_top = 359.0
+offset_right = 647.0
+offset_bottom = 394.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_b6rf1")
+theme_override_font_sizes/font_size = 18
+text = "新游戏"
+
+[node name="btn_settings" type="Button" parent="CanvasLayer/menu"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+offset_left = 312.0
+offset_top = 310.0
+offset_right = 410.0
+offset_bottom = 345.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_b6rf1")
+theme_override_font_sizes/font_size = 18
+disabled = true
+text = "设置"
+
+[node name="btn_credits" type="Button" parent="CanvasLayer/menu"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+offset_left = 312.0
+offset_top = 349.0
+offset_right = 410.0
+offset_bottom = 384.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_b6rf1")
+theme_override_font_sizes/font_size = 18
+disabled = true
+text = "开发者名单"
+
+[node name="btn_quit" type="Button" parent="CanvasLayer/menu"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+offset_left = 553.0
+offset_top = 479.0
+offset_right = 651.0
+offset_bottom = 514.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_b6rf1")
+theme_override_font_sizes/font_size = 18
+text = "退出"
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/menu"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 481.0
+offset_top = 320.0
+offset_right = 721.0
+offset_bottom = 440.0
+texture_normal = ExtResource("4_2ji6x")
+texture_hover = ExtResource("4_g1jbm")
+
+[node name="TextureButton2" type="TextureButton" parent="CanvasLayer/menu"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 480.0
+offset_top = 442.0
+offset_right = 720.0
+offset_bottom = 562.0
+texture_normal = ExtResource("6_4qoyc")
+texture_hover = ExtResource("5_ncdh2")

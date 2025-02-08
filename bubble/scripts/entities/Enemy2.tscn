@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://od22fa4stroj"]
+
+[ext_resource type="Script" path="res://scripts/entities/enemy.gd" id="1_nncsh"]
+[ext_resource type="Texture2D" uid="uid://ckb4ioersf22b" path="res://assets/textures/Aliens/alienBlue_round.png" id="2_5freb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_530co"]
+radius = 41.0122
+
+[node name="Enemy2" type="RigidBody2D" groups=["enemy"]]
+collision_layer = 2
+collision_mask = 7
+contact_monitor = true
+max_contacts_reported = 10
+script = ExtResource("1_nncsh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.999998, 1)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_5freb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_530co")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b7n1m3nnwfhmj"
+path="res://.godot/imported/谷口輝雄 - ポケウッドに铜像が建った!.mp3-18c90c7a1dbcf1ca7189758691f7c3a8.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music2/谷口輝雄 - ポケウッドに铜像が建った!.mp3"
+dest_files=["res://.godot/imported/谷口輝雄 - ポケウッドに铜像が建った!.mp3-18c90c7a1dbcf1ca7189758691f7c3a8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

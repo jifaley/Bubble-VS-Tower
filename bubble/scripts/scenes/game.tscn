@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://bob56vm7j67ma"]
+
+[ext_resource type="Script" path="res://scripts/scenes/game.gd" id="1_8y3uu"]
+[ext_resource type="FontFile" uid="uid://i6rohtpkljwg" path="res://assets/fonts/SourceHanSansCN-Normal.otf" id="2_esa62"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_8y3uu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="game" type="Control" parent="CanvasLayer"]
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="popup_game_over" type="MarginContainer" parent="CanvasLayer/game"]
+z_index = 100
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -58.5
+offset_right = 110.0
+offset_bottom = 58.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/game/popup_game_over"]
+layout_mode = 2
+mouse_filter = 1
+color = Color(0.258824, 0.258824, 0.258824, 0.807843)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/game/popup_game_over"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/game/popup_game_over/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="CanvasLayer/game/popup_game_over/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_esa62")
+theme_override_font_sizes/font_size = 42
+text = "恭喜过关！"
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/game/popup_game_over/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/game/popup_game_over/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="btn_quit" type="Button" parent="CanvasLayer/game/popup_game_over/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "退出"
+
+[node name="btn_confirm" type="Button" parent="CanvasLayer/game/popup_game_over/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "下一关"

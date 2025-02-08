@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2yac0ops2gpd"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_cotlu"]
+[ext_resource type="PackedScene" uid="uid://bm7bt1fbdnfgm" path="res://scripts/scenes/menu.tscn" id="1_ifv81"]
+[ext_resource type="AudioStream" uid="uid://bs8gfkayn72v8" path="res://assets/audio/sfx/ball_bounce.mp3" id="3_fph45"]
+[ext_resource type="AudioStream" uid="uid://cw5ig7vg3716j" path="res://assets/audio/music2/青木征洋 - Theme of Ken.mp3" id="4_osh3b"]
+[ext_resource type="AudioStream" uid="uid://cva06ke4wqlbc" path="res://assets/audio/music2/杉森雅和 - 大江戸戦士トノサマン.mp3" id="5_sathw"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_cotlu")
+
+[node name="Menu" parent="." instance=ExtResource("1_ifv81")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_fph45")
+
+[node name="BgmPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_osh3b")
+volume_db = -10.0
+
+[node name="CommonBgmPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_sathw")
+volume_db = -30.0

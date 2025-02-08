@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://bm0fi2lfn2yv"]
+
+[ext_resource type="PackedScene" uid="uid://dmno5y60oap3m" path="res://scripts/levels/level2.tscn" id="1_4p8q0"]
+[ext_resource type="Texture2D" uid="uid://bcin1ootnmb1x" path="res://assets/textures/Other/sand.png" id="5_ldc7m"]
+[ext_resource type="Shader" path="res://shaders/dashline.gdshader" id="6_6ddsc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jvwv"]
+size = Vector2(67.5, 1259)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yrdyl"]
+shader = ExtResource("6_6ddsc")
+shader_parameter/dash_length = 10.0
+shader_parameter/gap_length = 5.0
+shader_parameter/line_color = Vector4(1, 0, 0, 1)
+
+[node name="Level" instance=ExtResource("1_4p8q0")]
+
+[node name="GenerateRocks" parent="." index="10"]
+position = Vector2(868, -92)
+
+[node name="GenerateRocks2" parent="." index="11"]
+position = Vector2(974, -79)
+
+[node name="GenerateRocks3" parent="." index="12"]
+position = Vector2(2044, -198)
+
+[node name="subviewMarker" parent="." index="13"]
+position = Vector2(2004, 335)
+
+[node name="SubViewportContainer" parent="CanvasLayer2" index="2"]
+offset_left = 23.0
+offset_top = 153.0
+offset_right = -930.0
+offset_bottom = -231.0
+
+[node name="Barrier" parent="." index="16"]
+position = Vector2(1881, 499)
+
+[node name="Barrier2" type="StaticBody2D" parent="." index="17"]
+position = Vector2(817, 499)
+collision_layer = 4
+collision_mask = 6
+
+[node name="Sprite2D" type="Sprite2D" parent="Barrier2" index="0"]
+self_modulate = Color(1, 1, 1, 0.117647)
+position = Vector2(-54, -500.5)
+scale = Vector2(1, 17.9857)
+texture = ExtResource("5_ldc7m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2" index="1"]
+position = Vector2(-52.75, -498.5)
+shape = SubResource("RectangleShape2D_6jvwv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Barrier2" index="2"]
+self_modulate = Color(1, 1, 1, 0.117647)
+position = Vector2(287, -499.5)
+scale = Vector2(1, 17.8714)
+texture = ExtResource("5_ldc7m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Barrier2" index="3"]
+position = Vector2(291, -498)
+shape = SubResource("RectangleShape2D_6jvwv")
+
+[node name="cutLine" type="Line2D" parent="Barrier2" index="4"]
+material = SubResource("ShaderMaterial_yrdyl")
+position = Vector2(-2, -1)
+points = PackedVector2Array(-19, -478, 265, -478)
+width = 5.0
+default_color = Color(1, 0, 0, 0.470588)
+
+[node name="cutLineMarker" type="Marker2D" parent="Barrier2" index="5"]
+position = Vector2(112, -481)

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://edbebe8srx45"]
+
+[ext_resource type="Script" path="res://scripts/entities/core.gd" id="1_8o48a"]
+[ext_resource type="Texture2D" uid="uid://8illpv37fddh" path="res://assets/textures/UI/core_180_272.png" id="2_vo5w6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ieewm"]
+size = Vector2(118, 227)
+
+[node name="core" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 7
+freeze = true
+freeze_mode = 1
+contact_monitor = true
+max_contacts_reported = 10
+script = ExtResource("1_8o48a")
+impact_threshold = 2000
+required_impacts = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vo5w6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 15.5)
+shape = SubResource("RectangleShape2D_ieewm")

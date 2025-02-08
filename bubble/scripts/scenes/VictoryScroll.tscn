@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmffel7sebenr"]
+
+[ext_resource type="Texture2D" uid="uid://dhqgk2rts1mbb" path="res://assets/textures/UI/Victory.jpg" id="1_6ycfk"]
+[ext_resource type="Script" path="res://scripts/scenes/victory_scroll.gd" id="1_a8j52"]
+[ext_resource type="Texture2D" uid="uid://f6tncv4lmd54" path="res://assets/textures/UI/victory_button_200_200.png" id="3_jc1jw"]
+[ext_resource type="FontFile" uid="uid://ctop7bo0gkswh" path="res://assets/fonts/SourceHanSansCN-Bold.otf" id="3_rc6aw"]
+[ext_resource type="Texture2D" uid="uid://birxqg2wann1p" path="res://assets/textures/UI/victory_button_200_200_pressed.png" id="5_6na2l"]
+[ext_resource type="AudioStream" uid="uid://b7n1m3nnwfhmj" path="res://assets/audio/music2/谷口輝雄 - ポケウッドに铜像が建った!.mp3" id="6_m4wnu"]
+
+[node name="VictoryScroll" type="Node2D"]
+script = ExtResource("1_a8j52")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="BackGround" type="Sprite2D" parent="CanvasLayer/Control"]
+position = Vector2(578.5, 321)
+scale = Vector2(1.12988, 0.625)
+texture = ExtResource("1_6ycfk")
+
+[node name="ScrollingText" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -31.0
+offset_right = 0.5
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_rc6aw")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 3
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 202.0
+offset_right = 772.0
+offset_bottom = 567.0
+texture_normal = ExtResource("3_jc1jw")
+texture_pressed = ExtResource("5_6na2l")
+texture_hover = ExtResource("5_6na2l")
+stretch_mode = 0
+
+[node name="VictoryStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_m4wnu")
+volume_db = -10.0

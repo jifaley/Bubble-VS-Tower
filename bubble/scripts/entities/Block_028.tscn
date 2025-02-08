@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw8vvgfnateit"]
+
+[ext_resource type="Script" path="res://scripts/entities/block.gd" id="1_h0gj3"]
+[ext_resource type="Texture2D" uid="uid://cgpgwbk7pwb5" path="res://assets/textures/elements/Wood elements/elementWood028.png" id="2_kdksx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ieewm"]
+size = Vector2(220, 71)
+
+[node name="Block028" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 7
+contact_monitor = true
+max_contacts_reported = 10
+script = ExtResource("1_h0gj3")
+money_reward = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_kdksx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_ieewm")

@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://crpkobop6hgv7"]
+
+[ext_resource type="Script" path="res://scripts/entities/slingshot.gd" id="1_hrhmx"]
+[ext_resource type="Texture2D" uid="uid://btrdlig8r65ia" path="res://assets/textures/slingshot_right.png" id="1_kp4c6"]
+[ext_resource type="Texture2D" uid="uid://bqhqis0ipnlnw" path="res://assets/textures/slingshot_left.png" id="2_b1jh2"]
+[ext_resource type="Texture2D" uid="uid://b3q8mcwamtcro" path="res://assets/textures/slingshot.png" id="3_jxc1y"]
+
+[sub_resource type="Curve" id="Curve_t03l2"]
+min_value = 0.5
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.5), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_hc0ho"]
+min_value = 0.5
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.5), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c5hlr"]
+radius = 31.0161
+
+[node name="Slingshot" type="Node2D"]
+position = Vector2(320, 187)
+script = ExtResource("1_hrhmx")
+
+[node name="Right" type="Sprite2D" parent="."]
+position = Vector2(28, 46)
+texture = ExtResource("1_kp4c6")
+
+[node name="Line2D" type="Line2D" parent="."]
+z_index = 1
+points = PackedVector2Array(33, -25, -69, -14)
+width = 15.0
+width_curve = SubResource("Curve_t03l2")
+default_color = Color(0.2, 0.0666667, 0, 1)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+z_index = 2
+position = Vector2(16, -25)
+
+[node name="ShotBag" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(-70, -15)
+texture = ExtResource("3_jxc1y")
+
+[node name="Left" type="Sprite2D" parent="."]
+z_index = 4
+position = Vector2(0, 5)
+texture = ExtResource("2_b1jh2")
+
+[node name="Line2D2" type="Line2D" parent="."]
+z_index = 5
+points = PackedVector2Array(-6, -17, -69, -15)
+width = 15.0
+width_curve = SubResource("Curve_hc0ho")
+default_color = Color(0.2, 0.0666667, 0, 1)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(15, -24)
+shape = SubResource("CircleShape2D_c5hlr")

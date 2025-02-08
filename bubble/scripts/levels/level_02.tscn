@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://ygbtu2sk13wr"]
+
+[ext_resource type="PackedScene" uid="uid://n3d5j6ttog0o" path="res://scripts/levels/level.tscn" id="1_4uj1u"]
+[ext_resource type="PackedScene" uid="uid://dnxqq1saprf0i" path="res://scripts/entities/Block_010.tscn" id="2_24pmb"]
+[ext_resource type="PackedScene" uid="uid://bi8817stfro1r" path="res://scripts/entities/Block_012.tscn" id="3_q0qbv"]
+[ext_resource type="PackedScene" uid="uid://dpdqrxdv05tof" path="res://scripts/entities/Enemy.tscn" id="4_yqwu5"]
+
+[node name="Level_02" instance=ExtResource("1_4uj1u")]
+
+[node name="Block010" parent="." index="6" instance=ExtResource("2_24pmb")]
+position = Vector2(1656, 589)
+
+[node name="Block011" parent="." index="7" instance=ExtResource("3_q0qbv")]
+position = Vector2(1722, 515)
+
+[node name="Enemy" parent="." index="8" instance=ExtResource("4_yqwu5")]
+position = Vector2(1779, 592)

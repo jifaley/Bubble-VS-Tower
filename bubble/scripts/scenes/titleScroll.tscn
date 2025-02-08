@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://brnqissowb67a"]
+
+[ext_resource type="Texture2D" uid="uid://j4oibooigg52" path="res://assets/textures/_backgrounds/blue_shroom.png" id="1_i0sq8"]
+[ext_resource type="Script" path="res://scripts/scenes/title_scroll.gd" id="1_jk215"]
+[ext_resource type="FontFile" uid="uid://ctop7bo0gkswh" path="res://assets/fonts/SourceHanSansCN-Bold.otf" id="2_kbij2"]
+[ext_resource type="Texture2D" uid="uid://clya8qj47qug" path="res://assets/textures/UI/帮助画面.jpg" id="4_b1cim"]
+
+[node name="TitleScroll" type="Node2D"]
+script = ExtResource("1_jk215")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="BackGround" type="Sprite2D" parent="CanvasLayer/Control"]
+position = Vector2(578.5, 321)
+scale = Vector2(1.12988, 0.625)
+texture = ExtResource("1_i0sq8")
+
+[node name="ScrollingText" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -31.0
+offset_right = 0.5
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_kbij2")
+theme_override_font_sizes/font_size = 42
+horizontal_alignment = 3
+autowrap_mode = 3
+
+[node name="helpButton" type="TextureButton" parent="CanvasLayer/Control"]
+visible = false
+layout_mode = 0
+offset_left = 59.0
+offset_top = 47.0
+offset_right = 1098.0
+offset_bottom = 594.0
+texture_normal = ExtResource("4_b1cim")
+stretch_mode = 0

@@ -1,0 +1,328 @@
+[gd_scene load_steps=14 format=3 uid="uid://p5vkdkp376b4"]
+
+[ext_resource type="Texture2D" uid="uid://j4oibooigg52" path="res://assets/textures/_backgrounds/blue_shroom.png" id="1_8nq0d"]
+[ext_resource type="Script" path="res://scripts/scenes/shop.gd" id="1_a3np7"]
+[ext_resource type="Texture2D" uid="uid://nyx83pk8xhy4" path="res://assets/textures/elements/Wood elements/elementWood010.png" id="2_linno"]
+[ext_resource type="Texture2D" uid="uid://dv7pbrhhoualg" path="res://assets/textures/UI/upgrade_button_1_256_256.png" id="3_1klqj"]
+[ext_resource type="Texture2D" uid="uid://c8sem6lpm25wn" path="res://assets/textures/UI/upgrade_button_2_256_256.png" id="4_3s0i4"]
+[ext_resource type="Texture2D" uid="uid://cve2fywjo8074" path="res://assets/textures/UI/confirm_button_256_256.png" id="4_gfete"]
+[ext_resource type="Texture2D" uid="uid://b1iijbsfsn26d" path="res://assets/textures/UI/upgrade_button_3_256_256.png" id="6_8t0a4"]
+[ext_resource type="Texture2D" uid="uid://t51q4oo3br8m" path="res://assets/textures/UI/upgrade_button_4_256_256.png" id="7_nk2qt"]
+[ext_resource type="Texture2D" uid="uid://rr2mxkqbbpvg" path="res://assets/textures/UI/next_level_button_270_80.png" id="8_fdcqr"]
+[ext_resource type="Texture2D" uid="uid://c6j28x1o5e31r" path="res://assets/textures/UI/next_level_button_gray_270_80.png" id="9_bpxg0"]
+[ext_resource type="FontFile" uid="uid://i6rohtpkljwg" path="res://assets/fonts/SourceHanSansCN-Normal.otf" id="11_rhgvg"]
+[ext_resource type="AudioStream" uid="uid://dxd63c16emeq" path="res://assets/audio/music2/鶴山尚史 - 激闘への间奏曲.mp3" id="12_f5cm2"]
+[ext_resource type="AudioStream" uid="uid://e06gfrh50756" path="res://assets/audio/music2/景山将太 - レベルがあがった!.mp3" id="13_4g2lk"]
+
+[node name="Shop" type="Node2D"]
+script = ExtResource("1_a3np7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="BackGround" type="Sprite2D" parent="CanvasLayer/Control"]
+position = Vector2(578.5, 324)
+scale = Vector2(1.12988, 0.625)
+texture = ExtResource("1_8nq0d")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Middle" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="BoardArea" type="MarginContainer" parent="CanvasLayer/Control/VBoxContainer/Middle"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Upgrade1" type="Sprite2D" parent="CanvasLayer/Control/VBoxContainer/Middle/BoardArea"]
+position = Vector2(141, 145)
+scale = Vector2(3, 3)
+texture = ExtResource("2_linno")
+
+[node name="propertyLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer/Middle/BoardArea/Upgrade1"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -67.0
+offset_top = -23.6667
+offset_right = -3.0
+offset_bottom = -0.666666
+grow_horizontal = 2
+text = "发射装置"
+
+[node name="levelLabel1" type="Label" parent="CanvasLayer/Control/VBoxContainer/Middle/BoardArea/Upgrade1"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -57.8571
+offset_top = -69.7778
+offset_right = -11.8571
+offset_bottom = -46.7778
+grow_horizontal = 2
+grow_vertical = 0
+text = "等级 3"
+
+[node name="BoardArea2" type="MarginContainer" parent="CanvasLayer/Control/VBoxContainer/Middle"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Upgrade1" type="Sprite2D" parent="CanvasLayer/Control/VBoxContainer/Middle/BoardArea2"]
+position = Vector2(141, 145)
+scale = Vector2(3, 3)
+texture = ExtResource("2_linno")
+
+[node name="propertyLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer/Middle/BoardArea2/Upgrade1"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -67.0
+offset_top = -23.6667
+offset_right = -3.0
+offset_bottom = -0.666666
+grow_horizontal = 2
+text = "装填装置"
+
+[node name="levelLabel2" type="Label" parent="CanvasLayer/Control/VBoxContainer/Middle/BoardArea2/Upgrade1"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -57.8571
+offset_top = -69.7778
+offset_right = -11.8571
+offset_bottom = -46.7778
+grow_horizontal = 2
+grow_vertical = 0
+text = "等级 3"
+
+[node name="BoardArea3" type="MarginContainer" parent="CanvasLayer/Control/VBoxContainer/Middle"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Upgrade1" type="Sprite2D" parent="CanvasLayer/Control/VBoxContainer/Middle/BoardArea3"]
+position = Vector2(141, 145)
+scale = Vector2(3, 3)
+texture = ExtResource("2_linno")
+
+[node name="propertyLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer/Middle/BoardArea3/Upgrade1"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -67.0
+offset_top = -23.6667
+offset_right = -3.0
+offset_bottom = -0.666666
+grow_horizontal = 2
+text = "子弹强化"
+
+[node name="levelLabel3" type="Label" parent="CanvasLayer/Control/VBoxContainer/Middle/BoardArea3/Upgrade1"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -57.8571
+offset_top = -69.7778
+offset_right = -11.8571
+offset_bottom = -46.7778
+grow_horizontal = 2
+grow_vertical = 0
+text = "等级 3"
+
+[node name="BoardArea4" type="MarginContainer" parent="CanvasLayer/Control/VBoxContainer/Middle"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Upgrade1" type="Sprite2D" parent="CanvasLayer/Control/VBoxContainer/Middle/BoardArea4"]
+position = Vector2(141, 145)
+scale = Vector2(3, 3)
+texture = ExtResource("2_linno")
+
+[node name="propertyLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer/Middle/BoardArea4/Upgrade1"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -67.0
+offset_top = -23.6667
+offset_right = -3.0
+offset_bottom = -0.666666
+grow_horizontal = 2
+text = "资金装置"
+
+[node name="levelLabel4" type="Label" parent="CanvasLayer/Control/VBoxContainer/Middle/BoardArea4/Upgrade1"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -57.8571
+offset_top = -69.7778
+offset_right = -11.8571
+offset_bottom = -46.7778
+grow_horizontal = 2
+grow_vertical = 0
+text = "等级 3"
+
+[node name="Down" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="ButtonArea1" type="MarginContainer" parent="CanvasLayer/Control/VBoxContainer/Down"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton1" type="TextureButton" parent="CanvasLayer/Control/VBoxContainer/Down/ButtonArea1"]
+layout_mode = 2
+texture_normal = ExtResource("3_1klqj")
+texture_hover = ExtResource("4_gfete")
+stretch_mode = 3
+
+[node name="price_label1" type="Label" parent="CanvasLayer/Control/VBoxContainer/Down/ButtonArea1/TextureButton1"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 8.0
+offset_right = 246.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "$ 100"
+horizontal_alignment = 1
+
+[node name="ButtonArea2" type="MarginContainer" parent="CanvasLayer/Control/VBoxContainer/Down"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton2" type="TextureButton" parent="CanvasLayer/Control/VBoxContainer/Down/ButtonArea2"]
+layout_mode = 2
+texture_normal = ExtResource("4_3s0i4")
+texture_hover = ExtResource("4_gfete")
+stretch_mode = 3
+
+[node name="price_label2" type="Label" parent="CanvasLayer/Control/VBoxContainer/Down/ButtonArea2/TextureButton2"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 8.0
+offset_right = 246.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "$ 100"
+horizontal_alignment = 1
+
+[node name="ButtonArea3" type="MarginContainer" parent="CanvasLayer/Control/VBoxContainer/Down"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton3" type="TextureButton" parent="CanvasLayer/Control/VBoxContainer/Down/ButtonArea3"]
+layout_mode = 2
+texture_normal = ExtResource("6_8t0a4")
+texture_hover = ExtResource("4_gfete")
+stretch_mode = 3
+
+[node name="price_label3" type="Label" parent="CanvasLayer/Control/VBoxContainer/Down/ButtonArea3/TextureButton3"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 8.0
+offset_right = 246.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "$ 100"
+horizontal_alignment = 1
+
+[node name="ButtonArea4" type="MarginContainer" parent="CanvasLayer/Control/VBoxContainer/Down"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton4" type="TextureButton" parent="CanvasLayer/Control/VBoxContainer/Down/ButtonArea4"]
+layout_mode = 2
+texture_normal = ExtResource("7_nk2qt")
+texture_hover = ExtResource("4_gfete")
+stretch_mode = 3
+
+[node name="price_label4" type="Label" parent="CanvasLayer/Control/VBoxContainer/Down/ButtonArea4/TextureButton4"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 8.0
+offset_right = 246.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "$ 100"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="cash_label_shop" type="Label" parent="CanvasLayer/Control/VBoxContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 37.0
+offset_top = 31.0
+offset_right = 294.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "cash: $ 0"
+
+[node name="NextLevelButton" type="TextureButton" parent="CanvasLayer/Control/VBoxContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 816.0
+offset_top = 8.0
+offset_right = 1160.0
+offset_bottom = 110.0
+texture_normal = ExtResource("9_bpxg0")
+texture_hover = ExtResource("8_fdcqr")
+stretch_mode = 0
+
+[node name="shopguide_label" type="Label" parent="CanvasLayer/Control/VBoxContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 305.0
+offset_top = 37.0
+offset_right = 785.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("11_rhgvg")
+theme_override_font_sizes/font_size = 30
+text = "发射装置：升级后增加弹弓拉伸长度
+"
+horizontal_alignment = 1
+
+[node name="shopbgmPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_f5cm2")
+volume_db = -20.0
+parameters/looping = false
+
+[node name="shopSFXPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_4g2lk")
+volume_db = -20.0

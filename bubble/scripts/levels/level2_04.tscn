@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce277t4t4eit7"]
+
+[ext_resource type="PackedScene" uid="uid://dmno5y60oap3m" path="res://scripts/levels/level2.tscn" id="1_lhcnk"]
+[ext_resource type="PackedScene" uid="uid://edbebe8srx45" path="res://scripts/entities/core.tscn" id="3_espbu"]
+
+[node name="Level" instance=ExtResource("1_lhcnk")]
+
+[node name="Bullets" parent="." index="8"]
+position = Vector2(501, 606)
+
+[node name="GenerateRocks" parent="." index="10"]
+position = Vector2(1521, -273)
+
+[node name="GenerateRocks2" parent="." index="11"]
+position = Vector2(1694, -273)
+
+[node name="GenerateRocks3" parent="." index="12"]
+position = Vector2(1852, -269)
+
+[node name="subviewMarker" parent="." index="13"]
+position = Vector2(1691, 343)
+
+[node name="SubViewportContainer" parent="CanvasLayer2" index="2"]
+offset_left = 15.0
+offset_top = 199.0
+offset_right = -839.0
+offset_bottom = -210.0
+
+[node name="SubViewport" parent="CanvasLayer2/SubViewportContainer" index="0"]
+size = Vector2i(298, 239)
+
+[node name="Camera2D" parent="." index="15"]
+position = Vector2(2364, 368)
+
+[node name="Sprite2D" parent="Barrier" index="0"]
+position = Vector2(-311, -500.5)
+
+[node name="CollisionShape2D" parent="Barrier" index="1"]
+position = Vector2(-309.75, -498.5)
+
+[node name="cutLine" parent="Barrier" index="4"]
+position = Vector2(-2, -166)
+points = PackedVector2Array(-285, -481, 265, -478)
+
+[node name="cutLineMarker" parent="Barrier" index="5"]
+position = Vector2(112, -646)
+
+[node name="core" parent="." index="17" instance=ExtResource("3_espbu")]
+position = Vector2(2364, 498)

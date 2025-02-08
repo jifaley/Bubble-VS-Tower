@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdk6elmmqvhqv"]
+
+[ext_resource type="Script" path="res://scripts/entities/block.gd" id="1_2egfq"]
+[ext_resource type="Texture2D" uid="uid://blah81n7x2yb" path="res://assets/textures/elements/Metal elements/elementMetal013.png" id="2_2sfif"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ieewm"]
+size = Vector2(216, 68)
+
+[node name="Metal013" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 7
+contact_monitor = true
+max_contacts_reported = 10
+script = ExtResource("1_2egfq")
+impact_threshold = 1000
+required_impacts = 3
+money_reward = 20
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_2sfif")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_ieewm")

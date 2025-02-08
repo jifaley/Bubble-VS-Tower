@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkh4566ej8yb0"]
+
+[ext_resource type="Script" path="res://scripts/levels/level_test.gd" id="1_qntlp"]
+[ext_resource type="PackedScene" uid="uid://bi8817stfro1r" path="res://scripts/entities/Block_012.tscn" id="2_nfdl5"]
+
+[node name="LevelTest" type="Node2D"]
+script = ExtResource("1_qntlp")
+
+[node name="Block010" parent="." instance=ExtResource("2_nfdl5")]
+position = Vector2(529, 537)

@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsf6sfuu21gmx"]
+
+[ext_resource type="PackedScene" uid="uid://dmno5y60oap3m" path="res://scripts/levels/level2.tscn" id="1_kmabs"]
+
+[node name="Level" instance=ExtResource("1_kmabs")]
+
+[node name="Bullets" parent="." index="8"]
+position = Vector2(413, 604)
+
+[node name="GenerateRocks" parent="." index="10"]
+position = Vector2(854, -216)
+
+[node name="GenerateRocks2" parent="." index="11"]
+position = Vector2(914, -222)
+
+[node name="GenerateRocks3" parent="." index="12"]
+position = Vector2(983, -205)
+
+[node name="subviewMarker" parent="." index="13"]
+position = Vector2(943, 328)
+
+[node name="btn_reload" parent="CanvasLayer2" index="0"]
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBar" parent="CanvasLayer2/btn_reload" index="0"]
+metadata/_edit_use_anchors_ = true
+
+[node name="cash_label" parent="CanvasLayer2" index="1"]
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewportContainer" parent="CanvasLayer2" index="2"]
+offset_top = 148.0
+offset_bottom = -236.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Barrier" parent="." index="16"]
+position = Vector2(820, 492)
+
+[node name="cutLine" parent="Barrier" index="4"]
+position = Vector2(-2, 172)
+
+[node name="cutLineMarker" parent="Barrier" index="5"]
+position = Vector2(112, -308)

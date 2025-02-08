@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://kqy8t2bp8du7"]
+
+[ext_resource type="PackedScene" uid="uid://bsf6sfuu21gmx" path="res://scripts/levels/level2_00.tscn" id="1_twe2w"]
+
+[node name="Level" instance=ExtResource("1_twe2w")]
+
+[node name="GenerateRocks" parent="." index="10"]
+position = Vector2(1318, -216)
+
+[node name="GenerateRocks2" parent="." index="11"]
+position = Vector2(1378, -222)
+
+[node name="GenerateRocks3" parent="." index="12"]
+position = Vector2(1447, -205)
+
+[node name="subviewMarker" parent="." index="13"]
+position = Vector2(1407, 328)
+
+[node name="Camera2D" parent="." index="15"]
+position = Vector2(1393, 330)
+
+[node name="Barrier" parent="." index="16"]
+position = Vector2(1284, 492)
+
+[node name="cutLine" parent="Barrier" index="4"]
+position = Vector2(-2, 85)
+
+[node name="cutLineMarker" parent="Barrier" index="5"]
+position = Vector2(112, -395)
